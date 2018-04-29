@@ -1,0 +1,18 @@
+.content_show {
+    animation-name:fade-in;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        display:none;
+        margin-top: 20px;
+        opacity: 0;
+    }
+    to {
+        display:block;
+        opacity: 1;
+    
+    }
+}
