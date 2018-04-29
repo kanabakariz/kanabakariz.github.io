@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // write img containers
-    [1,2,3].forEach(function(index){
+    /*[1,2,3].forEach(function(index){
+        appendImg(index)
+    })*/
+    [1].forEach(function(index){
         appendImg(index)
     })
 
