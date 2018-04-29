@@ -3,7 +3,7 @@ var appendImg = function(index) {
     var div = document.createElement("div")
     div.classList.add('content')
     div.classList.add('content_show')
-    div.innerHTML = '<div class="content"><img src="/public/img/small/top_'+("00"+index).slice(-2)+'.jpg"></img></div>'
+    div.innerHTML = '<div class="content"><img src="/public/img/kugayama'+("00"+index).slice(-2)+'.jpg"></img></div>'
     document.getElementById('imgContainer').appendChild(div);
     //div.classList.remove('img_init')
     //div.classList.add('img_normal')
