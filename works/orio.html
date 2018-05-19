@@ -11,6 +11,7 @@
         <meta property="og:site_name" content="kanabakariz.com">
         <meta property="og:title" content="kanabakariz.com">
         <meta property="og:description" content="東京都杉並区の建築家。九州～北海道まで武蔵野美術大学と熊本大学出身の二人組で活動中。">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
         <link rel="stylesheet" href="/public/css/style.css">
     </head>
@@ -34,39 +35,41 @@
                 </div>
             </div>
         </nav>
-        <section class="hero">
-            <div class="container">
-                <img src="/public/img/medium/kugayama01.jpg">
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-
-            </div>
-        </section>
-        <section class="hero">
-            <div class="container">
-                <img src="/public/img/medium/saga03.jpg">
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-
-            </div>
-        </section>    
-        <section class="hero">
-            <div class="container">
-                <img src="/public/img/medium/orio01.jpg">
-            </div>
-        </section>        
-        <section class="section">
-            <div class="container">
-
-            </div>
-        </section>    
-        <!--<footer class="footer">
+        <main>
+            <section class="section">
+                <div class="container">
+                    <div id="macy-container">
+                        <div>
+                            <img src="/public/img/medium/orio01.jpg">
+                        </div>
+                        <div>
+                            <img src="/public/img/medium/orio02.jpg">
+                        </div>
+                    </div>
+                </div>
+                <script src="/public/js/macy.js"></script>
+                <script>
+                    var macy = Macy({
+                        container: '#macy-container',
+                        trueOrder: true,
+                        waitForImages: false,
+                        margin: 24,
+                        columns: 2,
+                        breakAt: {
+                            740: 2,
+                            520: 1
+                        }
+                    });
+                </script>
+            </section>
+            <section class="section">
+            </section>
+        </main>
+        <!--
+        <footer class="footer is-white">
             <div class="container"></div>
-        </footer>-->
+        </footer>
+        -->    
         <script src="/public/js/main.js"></script>
     </body>
 </html>
