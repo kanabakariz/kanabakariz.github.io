@@ -1,14 +1,3 @@
-/*console.log("I'm work");*/
-var appendImg = function(index) {
-    var div = document.createElement("div")
-    div.classList.add('content')
-    div.classList.add('content_show')
-    div.innerHTML = '<div class="content"><img src="/public/img/kugayama'+("00"+index).slice(-2)+'.jpg"></img></div>'
-    document.getElementById('imgContainer').appendChild(div);
-    //div.classList.remove('img_init')
-    //div.classList.add('img_normal')
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // Get all "navbar-burger" elements
@@ -33,47 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // write img containers
-    /*[1,2,3].forEach(function(index){
-        appendImg(index)
-    })*/
-    [1].forEach(function(index){
-        appendImg(index)
-    })
-
 });
-
-function ContentManager(containerId,scrollBaseEl,threshold) {
-    //this.containerEl = 
-    this.scrollBaseEl = scrollBaseEl
-    this.threshold = threshold
-    this.scrollTop = function(){
-       return this.scrollBaseEl.scrollTop
-    }
-    this.needsMoreContent = function(){
-        //var rect = containerEl.getBoundingClientRect()
-        //rect.bottom scrollTop
-        // rect.bottom - window.pageYOffset
-        //return contentBottom - window.innerHeight <= this.threshold 
-    }
-    this.renderLatestContent = function(content){
-        // TODO
-    }
-}
-
-function newConentManager(){
-    if (navigator.userAgent.toLowerCase().match(/webkit|msie 5/)) {
-        // Webkit系（Safari, Chrome, iOS）判定
-        if(navigator.userAgent.indexOf('Chrome') != -1){
-            // Chromeはhtml要素
-            el = document.documentElement
-        } else {
-            // Chrome以外はbody要素
-            el = document.body
-        }
-    } else {
-        // IE（6以上）、Firefox、Operaはhtml要素
-        el = document.documentElement
-    }    
-    return new ContentManager("contents-container",el,10)
-}
