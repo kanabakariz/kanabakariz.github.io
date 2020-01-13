@@ -21,6 +21,175 @@
     padding: 0.35rem 0.75rem;
 }
 
+.orio02_padding-bottom {
+    padding-bottom: 42px
+}
+
+.saga01_padding-bottom {
+    padding-bottom: 30px
+}
+.saga08_padding-bottom {
+    padding-bottom: 25px
+}
+.saga05_padding-bottom {
+    padding-bottom: 42px
+}
+.saga06_padding-bottom {
+    padding-bottom: 30px
+}
+.saga11_padding-bottom {
+    padding-bottom: 42px
+}
+.saga02_padding-bottom {
+    padding-bottom: 26px
+}
+.saga04_padding-bottom {
+    padding-bottom: 42px
+}
+.saga09_padding-bottom {
+    padding-bottom: 25px
+}
+.saga10_padding-bottom {
+    padding-bottom: 26px
+}
+
+@media screen and ( max-width:1366px) {
+    .orio02_padding-bottom {
+        padding-bottom: 33px
+    }
+    
+    .saga01_padding-bottom {
+        padding-bottom: 30px
+    }
+    .saga08_padding-bottom {
+        padding-bottom: 25px
+    }
+    .saga05_padding-bottom {
+        padding-bottom: 33px
+    }
+    .saga06_padding-bottom {
+        padding-bottom: 30px
+    }
+    .saga11_padding-bottom {
+        padding-bottom: 30px
+    }
+    .saga02_padding-bottom {
+        padding-bottom: 26px
+    }
+    .saga04_padding-bottom {
+        padding-bottom: 32px
+    }
+    .saga09_padding-bottom {
+        padding-bottom: 25px
+    }
+    .saga10_padding-bottom {
+        padding-bottom: 26px
+    }    
+}
+
+@media screen and ( max-width:1112px) {
+    .orio02_padding-bottom {
+        padding-bottom: 23px
+    }
+        
+    .saga01_padding-bottom {
+        padding-bottom: 30px
+    }
+    .saga08_padding-bottom {
+        padding-bottom: 29px
+    }
+    .saga05_padding-bottom {
+        padding-bottom: 22px
+    }
+    .saga06_padding-bottom {
+        padding-bottom: 27px
+    }
+    .saga11_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga02_padding-bottom {
+        padding-bottom: 26px
+    }
+    .saga04_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga09_padding-bottom {
+        padding-bottom: 28px
+    }
+    .saga10_padding-bottom {
+        padding-bottom: 26px
+    }
+}
+
+@media screen and ( max-width:834px) {
+
+    .orio02_padding-bottom {
+        padding-bottom: 10px
+    }
+    
+    .saga01_padding-bottom {
+        padding-bottom: 33px
+    }
+    .saga08_padding-bottom {
+        padding-bottom: 25px
+    }
+    .saga05_padding-bottom {
+        padding-bottom: 35px
+    }
+    .saga06_padding-bottom {
+        padding-bottom: 32px
+    }
+    .saga11_padding-bottom {
+        padding-bottom: 35px
+    }
+    .saga02_padding-bottom {
+        padding-bottom: 26px
+    }
+    .saga04_padding-bottom {
+        padding-bottom: 33px
+    }
+    .saga09_padding-bottom {
+        padding-bottom: 33px
+    }
+    .saga10_padding-bottom {
+        padding-bottom: 25px
+    }
+}
+
+@media screen and ( max-width:736px) {
+    .orio02_padding-bottom {
+        padding-bottom: 0px
+    }
+    
+    .saga01_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga08_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga05_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga06_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga11_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga02_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga04_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga09_padding-bottom {
+        padding-bottom: 0px
+    }
+    .saga10_padding-bottom {
+        padding-bottom: 0px
+    }    
+}
+
 @media screen and ( max-width:1024px) {
     .section {
         padding: 3rem 0.5rem;

@@ -1,0 +1,7 @@
+@media screen and ( max-width:834px) {
+
+    .tile.is-vertical > .tile.is-child:not(:last-child) {
+        margin-bottom: 0.0rem !important;
+    }
+    
+}
