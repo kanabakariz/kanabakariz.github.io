@@ -13,6 +13,7 @@
         <meta property="og:description" content="東京都杉並区の建築家。九州～北海道まで武蔵野美術大学と熊本大学出身の二人組で活動中。">
         <link rel="stylesheet" href="/public/css/bulma.css">
         <link rel="stylesheet" href="/public/css/style.css">
+        <script src="https://kit.fontawesome.com/8998df789a.js" crossorigin="anonymous"></script>
     </head>
     <body style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;">
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -29,24 +30,143 @@
                 </div>
                 <div id="navMenuDocumentation" class="navbar-menu">
                     <a class="navbar-item" href="/works.html">works</a>
-                    <a class="navbar-item" href="/about.html">about</a>
+                    <a class="navbar-item" href="/about.html">about us</a>
                     <a class="navbar-item" href="/contact.html">contact</a>
+                    <div class="navbar-item">
+                        <a href="https://facebook.com/kanabakariz/">
+                            <span class="icon px-4">
+                                <i class="fab fa-facebook"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/kanabakariz/">
+                            <span class="icon px-4">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <a href="https://instagram.com/kanabakariz/">
+                            <span class="icon px-4">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
-        <section class="section has-text-centered">
-
-        </section>
-        <section class="section has-text-centered">
+        <main>
+    <section class="hero is-medium has-text-centered">
+        <div class="hero-body is-hidden-mobile">
+            <p>相談は無料です。お気軽にお問い合わせください。</p>
+        </div>
+        <div class="hero-body is-block-mobile is-hidden-tablet">
+            <p>相談は無料です。</p>
             <p>お気軽にお問い合わせください。</p>
-            <p>info@kanabakariz.com</p>
-        </section>
+        </div>
+    </section>
 
-        <!--
-        <footer class="footer is-white">
-            <div class="container"></div>
-        </footer>
-        -->    
+    <script type="text/javascript">
+        let submitted = false;  
+        //let currentURL = window.location.href;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='/thanks.html';}"></iframe>
+    <section class="section">
+        <div class="columns">
+            <div class="column">
+
+            </div>
+            <div class="column">
+                <form id="contact" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSet01pksVc4_qwcB6QFU5k_WO9O7vAGtzw9TZ3tYpWOJXXU3w/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="field">
+                        <label class="label">お名前</label>
+                        <div class="control">
+                            <input class="input" id="contact-name" name="entry.2002031677" type="text" tabindex="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="label">Emailアドレス</label>
+                        <div class="control">
+                            <input class="input" id="contact-email" name="entry.624741141" type="email" tabindex="2" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">お問い合わせ内容</label>
+                        <div class="control">
+                            <textarea class="textarea" id="contact-body" name="entry.889796955" tabindex="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <a class="button is-dark" id="confirm" href="/" tabindex="4">確認</a>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title"></p>
+                                <a class="delete" id="hide" aria-label="close" data-target="confirm"></a>
+                            </header>
+                            <section class="modal-card-body">
+                                <div class="content">
+                                    <p>以下の内容でお問い合わせを送信します。</p>
+                                    <table class="table is-striped">
+                                        <tbody>
+                                            <tr>
+                                                <th>お名前</th>
+                                                <td id="confirm-name"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Emailアドレス</th>
+                                                <td id="confirm-email"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>お問い合わせ内容</th>
+                                                <td id="confirm-body"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <footer class="modal-card-foot">
+                                <a class="button" id="cancel" href="/" tabindex="1">キャンセル</a>
+                                <button class="button is-dark" tabindex="2">送信</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        const confirm = document.querySelector("#confirm");
+                        const contact = document.querySelector("#contact");
+                        const hide = document.querySelector("#hide");
+                        const cancel = document.querySelector("#cancel");
+                        const modal = document.querySelector("#modal");
+                        confirm.addEventListener("click",(event) => {
+                            event.preventDefault(); 
+                            contact.reportValidity();
+                            if (contact.checkValidity()) {
+                                document.querySelector("#confirm-name").innerHTML = document.querySelector("#contact-name").value;
+                                document.querySelector("#confirm-email").innerHTML = document.querySelector("#contact-email").value;
+                                document.querySelector("#confirm-body").innerHTML = document.querySelector("#contact-body").value.replace(/\n\r?/g, '<br />');
+                                modal.classList.toggle("is-active");
+                            }
+                        });
+                        hide.addEventListener("click",() => {
+                            modal.classList.toggle("is-active");
+                        });
+                        cancel.addEventListener("click",(event) => {
+                            event.preventDefault();
+                            modal.classList.toggle("is-active");
+                        });
+                    </script>                
+                </form>
+            </div>
+            <div class="column">
+
+            </div>
+        </div>
+    </section>
+</main>
         <script src="/public/js/main.js"></script>
     </body>
 </html>
